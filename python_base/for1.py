@@ -39,5 +39,15 @@ answers = ['lancelot', 'the holy grail', 'blue']
 for q ,a in zip(questions,answers):
     print('what is you {0}? It is {1},'.format(q,a))
 
+#需要逆向循环序列的话，先正向定位序列，然后调用 reversed() 函数:
+for i in reversed(range(1,10,2)):
+    print(i)
+
+#要按排序后的顺序循环序列的话，使用 sorted() 函数，它不改动原序列，而是生成一个新的已排序的序列:
+#set 去重
+basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']
+for f in sorted(set(basket)):
+    print(f)
+
 #如果你只是打印一个序列的话会发生奇怪的事情:
 print(range(10))
