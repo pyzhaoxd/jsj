@@ -13,3 +13,9 @@ print(x)
 l = [9,10]
 x.extend(l)
 print(x)
+
+# list.insert(i, x)
+# 在指定位置插入一个元素。第一个参数是准备插入到其前面的那个元素的索引，例如 a.insert(0, x)
+# 会插入到整个列表之前，而 a.insert(len(a), x) 相当于 a.append(x)。
+x.insert(0,13)
+print(x)
