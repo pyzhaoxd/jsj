@@ -62,3 +62,5 @@ print(range(10))
 #比较操作可以通过逻辑操作符 and 和 or 组合，比较的结果可以用 not 来取反义。
 # 这些操作符的优先级又低于比较操作符，在它们之中，not 具有最高的优先级，
 # or 优先级最低，所以 A and not B or C 等于 (A and (notB)) or C。当然，括号也可以用于比较表达式。
+
+print(list(range(5)))
