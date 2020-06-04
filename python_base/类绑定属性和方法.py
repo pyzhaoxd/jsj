@@ -29,3 +29,6 @@ print(s2.score)
 # s4.set_age2(99)
 # print(s4.core)
 
+
+#使用__slots__
+
