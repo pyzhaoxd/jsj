@@ -32,3 +32,27 @@ print(s2.score)
 
 #使用__slots__
 
+#如果我们想要限制实例的属性怎么办，比如只能对Student实例添加name和age属性
+
+class Student1(object):
+    __slots__ = ('name','age') #用tuple定义允许绑定的属性名称
+
+
+s7 = Student1()
+s7.name = 'zhaoxd'
+s7.age = 12    #绑定属性name和age
+print(s7.name)
+print(s7.age)
+#s7.score = 18 #绑定未在限制内的属性到class
+#print(s7.score)
+
+
+#使用__slots__要注意，__slots__定义的属性仅对当前类实例起作用，对继承的子类是不起作用的：
+class graduateStudent(Student1):
+    pass
+
+g = graduateStudent()
+g.score = 99
+print(g.score)
+
+#除非在子类中也定义__slots__，这样,子类实例允许定义的属性就是自身的__slots__，加上父类的__slots__
